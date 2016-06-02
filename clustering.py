@@ -20,12 +20,13 @@ term_ref.close()
 
 # critère de filtrage ??
 
-mini_term_infos = {}
-for term in term_infos
+#mini_term_infos = {}
+#for term in term_infos:
+#    mini_term_infos[term_infos[term]] = term_infos[term]["data"]
     
 
 # récupération des infos "colonnes" *.idx
-doc_paths = glob("work/corpus/02-indexed/*")
+doc_paths = glob("work/data/02-indexed/*")
 
 index = {}
 

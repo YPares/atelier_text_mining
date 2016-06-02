@@ -25,8 +25,8 @@ doc_metas = {}
 with open('work/meta/test.json') as metas:
     doc_metas = load(metas)
 
-doc_paths = glob("work/corpus/01-originaux/*")
-
+doc_paths = glob("work/data/01-originaux/*")
+print(doc_paths)
 # total par terme
 term_totals = {}
 
@@ -45,7 +45,7 @@ timer_match = 0
 timer_loop = 0
 timer_write = 0
 
-# ex: "work/corpus/01-originaux/1992-carbon_isotope_compo-A8E6B4D.txt"
+# ex: "work/data/01-originaux/1992-carbon_isotope_compo-A8E6B4D.txt"
 for (i, doc_path) in enumerate(doc_paths):
 
     # décomptes par termes par doc
@@ -182,7 +182,7 @@ for (i, doc_path) in enumerate(doc_paths):
     t5 = datetime.now()
 
     # write indexed doc
-    out_doc = open("work/corpus/02-indexed/%s.idx" % doc_name, 'w')
+    out_doc = open("work/data/02-indexed/%s.idx" % doc_name, 'w')
     for term,count in index.items():
         print("%s\t%i" % (term, count), file=out_doc)
     out_doc.close()
